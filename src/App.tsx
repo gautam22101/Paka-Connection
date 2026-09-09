@@ -17,6 +17,7 @@ import Lifestyle from './pages/Lifestyle';
 import Reviews from './pages/Reviews';
 import GetInTouch from './pages/GetInTouch';
 import Blog from './pages/Blog';
+import ErrorPage from './pages/ErrorPage';
 
 export default function App() {
   return (
@@ -40,6 +41,9 @@ export default function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/get-in-touch" element={<GetInTouch />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/500" element={<ErrorPage code="500" />} />
+          <Route path="/503" element={<ErrorPage code="503" />} />
+          <Route path="*" element={<ErrorPage code="404" />} />
         </Route>
       </Routes>
     </BrowserRouter>
