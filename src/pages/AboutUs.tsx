@@ -115,7 +115,12 @@ export default function AboutUs() {
               <motion.div key={member.name} {...fadeIn(i * 0.1)} className="bg-white border border-nc-border rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 overflow-hidden">
                 {member.image ? (
                   <div className="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-4 border-nc-orange/20 bg-nc-orange/10">
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                      style={{ objectPosition: member.name === 'Shivam Panday' ? 'center top' : 'center' }}
+                    />
                   </div>
                 ) : (
                   <div className="w-28 h-28 mx-auto mb-4 rounded-full border-4 border-nc-orange/20 bg-nc-orange/10 flex items-center justify-center text-3xl font-bold text-nc-orange">
