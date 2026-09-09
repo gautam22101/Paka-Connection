@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Pakaconnection icon">
+  <defs>
+    <linearGradient id="pc-grad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FF8A3D"/>
+      <stop offset="100%" stop-color="#F15A29"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="url(#pc-grad)"/>
+  <path d="M9 7V25H14.5C19.5 25 23 21.7 23 16.5C23 11.3 19.5 7 14.5 7H9ZM12.5 10.5H14.3C17.5 10.5 19.4 12.4 19.4 16.5C19.4 20.6 17.5 22.5 14.3 22.5H12.5V10.5Z" fill="#fff"/>
+  <path d="M20 7H24.5V25H20V7Z" fill="#fff" opacity="0.9"/>
+  <circle cx="7.2" cy="12.5" r="1.8" fill="#fff" opacity="0.95"/>
+  <circle cx="7.2" cy="19.5" r="1.8" fill="#fff" opacity="0.9"/>
+  <path d="M7.2 12.5H11.5M11.5 12.5V19.5M11.5 19.5H7.2" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+</svg>

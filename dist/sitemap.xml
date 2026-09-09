@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://pakaconnection.com/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://pakaconnection.com/about</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/what-we-do</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/what-we-do/web-development</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/what-we-do/digital-marketing</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/what-we-do/erp</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/what-we-do/erp/sales-order</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/what-we-do/erp/production-order</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/what-we-do/erp/inventory-material-planning</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/industries/food</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/industries/mncs</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/industries/healthcare</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/industries/manufacturing</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/industries/lifestyle</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/reviews</loc><priority>0.6</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/get-in-touch</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://pakaconnection.com/blog</loc><priority>0.7</priority><changefreq>weekly</changefreq></url>
+</urlset>
