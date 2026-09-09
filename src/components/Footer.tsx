@@ -51,7 +51,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-2">
-              <img src="/pakaconnection-logo.svg" alt="Pakaconnection logo" className="h-10 w-auto object-contain" />
+              <img src="/pakaconnection-footer-logo.svg" alt="Pakaconnection logo" className="h-10 w-auto object-contain" />
             </Link>
             <p className="text-gray-400 mt-4 text-sm leading-relaxed max-w-xs">
               Connecting Technology, Marketing & Business Growth. We help businesses transform, scale, and lead in the digital age.

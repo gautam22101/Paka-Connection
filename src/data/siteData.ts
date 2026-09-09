@@ -1,3 +1,6 @@
+import shivamPandayPhoto from '../assets/team/shivam-panday.jpg';
+import anandPrajapatiPhoto from '../assets/team/anand-prajapati.jpg';
+
 export type Review = {
   id: number;
   client_name: string;
@@ -21,8 +24,8 @@ export const companyProfile = {
 };
 
 export const teamMembers = [
-  { name: 'Shivam Panday', role: 'Digital Marketing Lead', image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=900&q=80' },
-  { name: 'Anand Prajapati', role: 'ERP Solutions Lead', image: 'https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=900&q=80' },
+  { name: 'Shivam Panday', role: 'Digital Marketing Lead', image: shivamPandayPhoto },
+  { name: 'Anand Prajapati', role: 'ERP Solutions Lead', image: anandPrajapatiPhoto },
   { name: 'Gautam Thakur', role: 'Website Development Lead', image: 'https://avatars.githubusercontent.com/u/153732306?v=4?s=400' },
 ];
 
