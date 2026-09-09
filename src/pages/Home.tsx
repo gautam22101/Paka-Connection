@@ -58,12 +58,15 @@ export default function Home() {
   return (
     <div>
       {/* ===== HERO ===== */}
-      <section className="relative bg-nc-black text-white min-h-[90vh] flex items-center overflow-hidden">
-        <ConnectionVisual variant="dense" className="opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-nc-black/50" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
-          <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-          <div className="max-w-3xl">
+      <section className="relative bg-[#071a2b] text-white min-h-[90vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <ServiceImageCarousel />
+        </div>
+        <ConnectionVisual variant="dense" className="z-[1] opacity-20" />
+        <div className="absolute inset-0 z-[2] bg-[linear-gradient(90deg,rgba(3,32,58,0.97)_0%,rgba(5,40,72,0.9)_48%,rgba(5,25,43,0.62)_100%)]" />
+        <div className="relative z-[3] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
+          <div className="flex justify-center">
+          <div className="max-w-4xl text-left">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-nc-orange/10 border border-nc-orange/20 rounded-full mb-6">
                 <div className="w-2 h-2 bg-nc-orange rounded-full animate-pulse-orange" />
@@ -77,7 +80,7 @@ export default function Home() {
             <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="mt-6 text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed">
               We bridge the gap between technology, marketing, and business strategy to help you grow faster, smarter, and stronger.
             </motion.p>
-            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }} className="mt-8 flex flex-col sm:flex-row gap-4">
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }} className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <Link to="/get-in-touch" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-nc-orange text-white font-semibold rounded-lg hover:bg-nc-orange-dark transition-colors text-lg">
                 Start a Project <ArrowRight className="w-5 h-5" />
               </Link>
@@ -86,14 +89,6 @@ export default function Home() {
               </Link>
             </motion.div>
           </div>
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="service-carousel-frame"
-          >
-            <ServiceImageCarousel />
-          </motion.div>
           </div>
         </div>
       </section>

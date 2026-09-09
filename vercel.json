@@ -2,7 +2,6 @@
   "env": {
     "NEXT_PUBLIC_SUPABASE_URL": "https://udtmhumduddvqgxjiela.supabase.co",
     "NEXT_PUBLIC_SUPABASE_ANON_KEY": "sb_publishable_t2fOox11db3aKZYZ1kudPA_VGjbLdHZ",
-    "SUPABASE_SERVICE_ROLE_KEY": "sb_secret_Km1li4HwGPsTQ5-bikLkyQ_snxQvC8z",
     "VITE_SUPABASE_URL": "https://udtmhumduddvqgxjiela.supabase.co",
     "VITE_SUPABASE_ANON_KEY": "sb_publishable_t2fOox11db3aKZYZ1kudPA_VGjbLdHZ",
     "VITE_GOOGLE_CLIENT_ID": "1065078894672-rmp5kp8vfjns5rn9kp5psfp16g691043.apps.googleusercontent.com",

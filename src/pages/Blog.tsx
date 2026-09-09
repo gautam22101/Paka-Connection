@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, ArrowRight, Clock, Tag } from 'lucide-react';
+import { Calendar, Clock, Tag } from 'lucide-react';
 import PageHero from '../components/PageHero';
 import CTASection from '../components/CTASection';
 
@@ -17,6 +18,28 @@ const posts = [
 ];
 
 export default function Blog() {
+  const [activeCategory, setActiveCategory] = useState('All');
+  const [email, setEmail] = useState('');
+  const [subscriptionStatus, setSubscriptionStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const visiblePosts = activeCategory === 'All' ? posts : posts.filter((post) => post.category === activeCategory);
+
+  const handleSubscribe = async (event: React.FormEvent) => {
+    event.preventDefault();
+    setSubscriptionStatus('sending');
+    try {
+      const response = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      if (!response.ok) throw new Error('Subscription failed');
+      setEmail('');
+      setSubscriptionStatus('success');
+    } catch {
+      setSubscriptionStatus('error');
+    }
+  };
+
   return (
     <div>
       <PageHero
@@ -30,7 +53,16 @@ export default function Blog() {
           {/* Categories */}
           <motion.div {...fadeIn()} className="flex flex-wrap gap-3 mb-12">
             {categories.map((cat) => (
-              <button key={cat} className="px-4 py-2 bg-nc-light border border-nc-border rounded-lg text-sm font-medium text-nc-black hover:bg-nc-orange hover:text-white hover:border-nc-orange transition-colors">
+              <button
+                key={cat}
+                type="button"
+                onClick={() => setActiveCategory(cat)}
+                className={`px-4 py-2 border rounded-lg text-sm font-medium transition-colors ${
+                  activeCategory === cat
+                    ? 'bg-nc-orange text-white border-nc-orange'
+                    : 'bg-nc-light border-nc-border text-nc-black hover:bg-nc-orange hover:text-white hover:border-nc-orange'
+                }`}
+              >
                 {cat}
               </button>
             ))}
@@ -38,7 +70,7 @@ export default function Blog() {
 
           {/* Blog Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post, i) => (
+            {visiblePosts.map((post, i) => (
               <motion.article key={post.id} {...fadeIn(i * 0.1)} className="group bg-nc-light border border-nc-border rounded-2xl overflow-hidden hover:shadow-xl hover:border-nc-orange/30 transition-all duration-300">
                 <div className="aspect-[16/9] overflow-hidden bg-gradient-to-br from-nc-dark to-nc-black">
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
@@ -56,21 +88,11 @@ export default function Blog() {
                       <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {post.date}</span>
                       <span className="flex items-center gap-1"><Clock className="w-3 h-3" /> {post.readTime}</span>
                     </div>
-                    <span className="text-nc-orange font-medium text-sm inline-flex items-center gap-1 group-hover:underline">
-                      Read <ArrowRight className="w-3 h-3" />
-                    </span>
                   </div>
                 </div>
               </motion.article>
             ))}
           </div>
-
-          {/* Load More */}
-          <motion.div {...fadeIn()} className="mt-12 text-center">
-            <button className="px-8 py-3 border-2 border-nc-orange text-nc-orange font-semibold rounded-lg hover:bg-nc-orange hover:text-white transition-colors">
-              Load More Articles
-            </button>
-          </motion.div>
         </div>
       </section>
 
@@ -80,10 +102,25 @@ export default function Blog() {
           <motion.div {...fadeIn()}>
             <h2 className="text-2xl md:text-3xl font-bold">Stay Connected</h2>
             <p className="mt-2 text-gray-400">Get insights, strategies, and updates delivered to your inbox.</p>
-            <form onSubmit={(e) => { e.preventDefault(); }} className="mt-6 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <input type="email" placeholder="your@email.com" className="flex-1 px-4 py-3 bg-nc-dark border border-nc-gray rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-nc-orange/50" />
-              <button type="submit" className="px-6 py-3 bg-nc-orange text-white font-semibold rounded-lg hover:bg-nc-orange-dark transition-colors">Subscribe</button>
+            <form onSubmit={handleSubscribe} className="mt-6 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <input
+                type="email"
+                required
+                value={email}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                  if (subscriptionStatus !== 'idle') setSubscriptionStatus('idle');
+                }}
+                placeholder="your@email.com"
+                aria-label="Email address"
+                className="flex-1 px-4 py-3 bg-nc-dark border border-nc-gray rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-nc-orange/50"
+              />
+              <button type="submit" disabled={subscriptionStatus === 'sending'} className="px-6 py-3 bg-nc-orange text-white font-semibold rounded-lg hover:bg-nc-orange-dark transition-colors disabled:opacity-50">
+                {subscriptionStatus === 'sending' ? 'Subscribing...' : 'Subscribe'}
+              </button>
             </form>
+            {subscriptionStatus === 'success' && <p className="mt-3 text-sm text-green-400">You’re subscribed. Thanks for staying connected!</p>}
+            {subscriptionStatus === 'error' && <p className="mt-3 text-sm text-red-300">We couldn’t subscribe you right now. Please try again.</p>}
           </motion.div>
         </div>
       </section>

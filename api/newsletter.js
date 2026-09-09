@@ -8,8 +8,11 @@ export default async function handler(req, res) {
 
   try {
     if (req.method === 'POST') {
-      const { email } = req.body;
+      const email = typeof req.body?.email === 'string' ? req.body.email.trim().toLowerCase() : '';
       if (!email) return res.status(400).json({ error: 'Email is required.' });
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        return res.status(400).json({ error: 'Please provide a valid email address.' });
+      }
       const { data, error } = await supabase
         .from('newsletter_subscribers')
         .insert({ email })
