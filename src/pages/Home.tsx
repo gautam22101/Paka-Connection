@@ -58,57 +58,38 @@ export default function Home() {
   return (
     <div>
       {/* ===== HERO ===== */}
-      <section className="relative bg-[#02070f] text-white min-h-[90vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_top,_rgba(247,209,93,0.12),transparent_35%),linear-gradient(90deg,#02070f_0%,#041522_100%)]" />
-        <div className="relative z-[2] max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-10 py-16 lg:py-24 w-full">
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
-              className="w-full lg:w-[60%] flex justify-center"
-            >
-              <img
-                src="/pakaconnection-logo.svg"
-                alt="Pakka Connection logo"
-                className="w-full max-w-[840px] h-auto drop-shadow-[0_0_22px_rgba(247,209,93,0.12)]"
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7, delay: 0.1 }}
-              className="w-full lg:w-[28%] flex items-center justify-center lg:justify-start"
-            >
-              <div className="hidden lg:block h-[300px] w-[3px] bg-[#f3f3f3] opacity-90" />
-              <div className="lg:ml-10 text-left text-white">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#f7d15d]/8 border border-[#f7d15d]/30 rounded-full mb-8 text-[#f7d15d] text-xs font-medium uppercase tracking-[0.22em]">
-                  <span className="inline-block w-2 h-2 rounded-full bg-[#f7d15d]" />
-                  360° Growth Partner
-                </div>
-                <div className="space-y-2 text-4xl md:text-5xl lg:text-[2.8rem] font-light leading-[1.1] tracking-[-0.04em] uppercase">
-                  <div>360° SOLUTION</div>
-                  <div>PROVIDER FOR</div>
-                  <div>BRANDS &amp; BUSINESS</div>
-                </div>
+      <section className="relative bg-[#071a2b] text-white min-h-[90vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <ServiceImageCarousel />
+        </div>
+        <ConnectionVisual variant="dense" className="z-[1] opacity-20" />
+        <div className="absolute inset-0 z-[2] bg-[linear-gradient(90deg,rgba(3,32,58,0.97)_0%,rgba(5,40,72,0.9)_48%,rgba(5,25,43,0.62)_100%)]" />
+        <div className="relative z-[3] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 w-full">
+          <div className="flex justify-center">
+          <div className="max-w-4xl text-left">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-nc-orange/10 border border-nc-orange/20 rounded-full mb-6">
+                <div className="w-2 h-2 bg-nc-orange rounded-full animate-pulse-orange" />
+                <span className="text-nc-orange text-sm font-medium">Connecting Technology, Marketing & Business Growth</span>
               </div>
             </motion.div>
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }} className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+              Connect Your Business to{' '}
+              <span className="text-gradient">What's Next.</span>
+            </motion.h1>
+            <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.2 }} className="mt-6 text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed">
+              We bridge the gap between technology, marketing, and business strategy to help you grow faster, smarter, and stronger.
+            </motion.p>
+            <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.3 }} className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+              <Link to="/get-in-touch" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-nc-orange text-white font-semibold rounded-lg hover:bg-nc-orange-dark transition-colors text-lg">
+                Start a Project <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link to="/what-we-do" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:border-nc-orange hover:text-nc-orange transition-colors text-lg">
+                Explore Services
+              </Link>
+            </motion.div>
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-12 flex justify-center lg:justify-start"
-          >
-            <Link
-              to="/get-in-touch"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#f7d15d] text-[#050b12] font-bold rounded-xl shadow-[0_12px_30px_rgba(247,209,93,0.2)] hover:scale-[1.02] transition-transform text-base md:text-lg uppercase tracking-[0.08em]"
-            >
-              Start a Project <ArrowRight className="w-5 h-5" />
-            </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
 
