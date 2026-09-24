@@ -112,6 +112,61 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="bg-[#f6f6f3] py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div {...fadeIn()} className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-nc-black">Brand Direction Demo</h2>
+            <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Two refined directions based on the provided final logo.</p>
+          </motion.div>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            <motion.div {...fadeIn(0.05)} className="rounded-[32px] border border-[#f1d16a]/40 bg-[#02070f] p-4 shadow-[0_25px_60px_rgba(0,0,0,0.18)]">
+              <div className="mb-4 flex items-center justify-between">
+                <span className="inline-flex items-center gap-2 rounded-full border border-[#f1d16a]/40 bg-[#f7d15d]/10 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#f7d15d]">
+                  <span className="h-2 w-2 rounded-full bg-[#f7d15d]" />
+                  Option A
+                </span>
+                <span className="text-xs font-medium uppercase tracking-[0.2em] text-gray-400">Premium</span>
+              </div>
+              <div className="rounded-[28px] border border-white/5 bg-[#02070f] px-3 py-6 sm:px-6 lg:px-8">
+                <div className="flex flex-col items-center justify-center gap-6 text-center">
+                  <img src="/pakaconnection-logo.svg" alt="Premium Pakaconnection logo demo" className="w-full max-w-[760px] h-auto" />
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div {...fadeIn(0.1)} className="rounded-[32px] border border-[#dfe2e8] bg-white p-4 shadow-[0_25px_60px_rgba(0,0,0,0.06)]">
+              <div className="mb-4 flex items-center justify-between">
+                <span className="inline-flex items-center gap-2 rounded-full border border-[#d4d8dd] bg-[#f5f6f7] px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-[#1f2937]">
+                  <span className="h-2 w-2 rounded-full bg-[#111827]" />
+                  Option B
+                </span>
+                <span className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500">Corporate</span>
+              </div>
+              <div className="rounded-[28px] border border-[#ececec] bg-[#f8f8f8] px-3 py-6 sm:px-6 lg:px-8">
+                <div className="flex flex-col items-center justify-center gap-6 text-center">
+                  <div className="w-full max-w-[760px] rounded-[32px] border border-[#e3e3e3] bg-white p-6 shadow-sm">
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="flex items-center justify-center gap-4">
+                        <div className="flex h-20 w-20 items-center justify-center rounded-full border-[6px] border-[#dca736] bg-[#fffaf0] text-3xl font-black text-[#111827]">P</div>
+                        <div className="text-left">
+                          <div className="text-3xl font-black tracking-[-0.08em] text-[#111827] sm:text-4xl">PAKKA</div>
+                          <div className="text-lg font-medium tracking-[0.35em] text-[#4b5563] sm:text-xl">CONNECTION</div>
+                        </div>
+                      </div>
+                      <div className="mt-3 h-px w-full max-w-[520px] bg-gradient-to-r from-transparent via-[#d4ad4d] to-transparent" />
+                      <div className="mt-2 text-center text-sm font-medium uppercase tracking-[0.28em] text-[#374151]">
+                        360° solution provider for brands &amp; business
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== BRAND INTRO ===== */}
       <section className="bg-white py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
