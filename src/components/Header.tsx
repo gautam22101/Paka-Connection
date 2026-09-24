@@ -79,7 +79,7 @@ export default function Header() {
             <img
               src="/pakka-connection-logo.svg"
               alt="Pakka Connection logo"
-              className="h-9 w-auto object-contain group-hover:scale-105 transition-transform"
+              className="h-12 lg:h-16 w-auto object-contain group-hover:scale-105 transition-transform"
             />
           </Link>
 
