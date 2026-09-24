@@ -77,8 +77,8 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group" aria-label="Pakaconnection Home">
             <img
-              src="/pakaconnection-logo.svg"
-              alt="Pakaconnection logo"
+              src="/pakka-connection-logo.svg"
+              alt="Pakka Connection logo"
               className="h-9 w-auto object-contain group-hover:scale-105 transition-transform"
             />
           </Link>
