@@ -1,26 +1,33 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 180" role="img" aria-labelledby="title desc">
-  <title id="title">Pakaconnection Logo</title>
-  <desc id="desc">Pakaconnection logo with white and orange text for dark backgrounds.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-labelledby="title desc">
+  <title id="title">Pakaconnection Footer Logo</title>
+  <desc id="desc">Compact Pakaconnection wordmark for dark footer use.</desc>
   <defs>
-    <linearGradient id="pc-orange" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#FF8A3D"/>
-      <stop offset="100%" stop-color="#F15A29"/>
+    <linearGradient id="gold" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffd75b"/>
+      <stop offset="18%" stop-color="#f7d35d"/>
+      <stop offset="42%" stop-color="#f2b92a"/>
+      <stop offset="68%" stop-color="#d89f0d"/>
+      <stop offset="100%" stop-color="#f7d45b"/>
     </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <g transform="translate(10 10)">
-    <rect x="0" y="0" width="150" height="150" rx="34" fill="url(#pc-orange)"/>
-    <path d="M42 36V114H74.5C101 114 118 98.8 118 73.5C118 48.2 101 36 74.5 36H42ZM62 54.5H73.5C90 54.5 100 61 100 73.5C100 86 90 92.5 73.5 92.5H62V54.5Z" fill="#fff"/>
-    <path d="M84 36H112V114H84V36Z" fill="#fff" opacity="0.9"/>
-    <circle cx="29" cy="50" r="7" fill="#fff" opacity="0.96"/>
-    <circle cx="29" cy="100" r="7" fill="#fff" opacity="0.9"/>
-    <circle cx="118" cy="50" r="7" fill="#fff" opacity="0.9"/>
-    <circle cx="118" cy="100" r="7" fill="#fff" opacity="0.9"/>
-    <path d="M29 50H118M29 100H118M29 50V100M118 50V100" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
-    <path d="M53 128C72 141 93 141 113 128" stroke="#fff" stroke-width="5" stroke-linecap="round" fill="none" opacity="0.7"/>
+
+  <rect width="900" height="220" fill="#030d1a"/>
+
+  <g transform="translate(18, 26)" filter="url(#softGlow)">
+    <circle cx="84" cy="84" r="76" fill="none" stroke="url(#gold)" stroke-width="7"/>
+    <path d="M138 28 A76 76 0 1 1 126 156" fill="none" stroke="url(#gold)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M127 31 L128 67 L167 49 Z" fill="url(#gold)"/>
   </g>
-  <g transform="translate(200 35)">
-    <text x="0" y="54" font-size="54" font-weight="800" fill="#fff" font-family="Segoe UI, Arial, sans-serif" letter-spacing="-1.5">Paka</text>
-    <text x="176" y="54" font-size="54" font-weight="800" fill="#F15A29" font-family="Segoe UI, Arial, sans-serif" letter-spacing="-1.5">Connection</text>
-    <text x="2" y="92" font-size="18" font-weight="700" fill="#D1D5DB" font-family="Segoe UI, Arial, sans-serif" letter-spacing="2.8">TECHNOLOGY • MARKETING • ERP</text>
+
+  <g transform="translate(210, 32)">
+    <text x="0" y="58" font-size="70" font-weight="900" fill="#f5f5f5" font-family="Segoe UI, Arial, sans-serif" letter-spacing="-3">PAKKA</text>
+    <text x="3" y="112" font-size="26" font-weight="600" fill="#f5f5f5" font-family="Segoe UI, Arial, sans-serif" letter-spacing="3.2">CONNECTION</text>
   </g>
 </svg>
